@@ -1,0 +1,11 @@
+/* Asegura que las imágenes de las cards no se distorsionen */
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Altura fija para uniformidad */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+}
+
+/* Opcional: Centrar el badge del carrito si se ve mal */
+.navbar-nav .badge {
+    vertical-align: top;
+}
