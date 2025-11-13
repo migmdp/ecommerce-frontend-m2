@@ -157,6 +157,27 @@ function renderizarCarrito() {
 
     totalCarrito.textContent = `$${total.toFixed(2)}`;
 }
+// --- Lógica de Interfaz y Botones (Al final del archivo) --- 
+
+const btnRegistro = document.querySelector('#btn-registro');
+// Usamos el ID del contenedor que sugerí en el paso 1
+const loginFormCard = document.querySelector('#login-form-card'); 
+
+function toggleLoginForm() {
+    if (loginFormCard.style.display === 'none') {
+        // Muestra el formulario
+        // Usa 'block' o 'flex' según cómo quieras que se muestre, o simplemente una cadena vacía
+        loginFormCard.style.display = ''; 
+    } else {
+        // Oculta el formulario
+        loginFormCard.style.display = 'none';
+    }
+}
+
+// Event Listener para el botón "registrarse"
+if (btnRegistro && loginFormCard) {
+    btnRegistro.addEventListener('click', toggleLoginForm);
+}
 
 // Función para eliminar un producto del carrito
 function eliminarProducto(e) {
